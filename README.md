@@ -76,7 +76,7 @@ Next, create a notification object and set parameters. See the [payload document
 	
 	apnsConnection.sendNotification(note);
 	
-As of version 1.2.0 it is also possible to use a set of methods provided by Notification object (`setAlertText`, `setActionLocKey`, `setLocKey`, `setLocArgs`, `setLaunchImage`) to aid the creation of the alert parameters. For applications which provide Newsstand capability there is a new boolean parameter `note.newsstandAvailable` to specify `content-available` in the payload.
+As of version 1.2.0 it is also possible to use a set of methods provided by Notification object (`setAlertText`, `setActionLocKey`, `setLocKey`, `setLocArgs`, `setLaunchImage`) to aid the creation of the alert parameters. For applications which provide Newsstand capability there is a new boolean parameter `note.newsstandAvailable` to specify `content-available` in the payload. For systems implementing MDM functionality `note.mdm` is available (all other parameters will be ignored when using this property).
 
 The above options will compile the following dictionary to send to the device:
 
